@@ -1,8 +1,11 @@
 package com.yb.vhr.mapper;
 
 import com.yb.vhr.model.Hr;
+import com.yb.vhr.model.Role;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.context.annotation.Bean;
+
+import java.util.List;
 
 @Mapper
 public interface HrMapper {
@@ -19,4 +22,6 @@ public interface HrMapper {
     int updateByPrimaryKey(Hr record);
 
     Hr loadUserByUsername(String username);
+
+    List<Role> getHrRolesById(Integer id);
 }

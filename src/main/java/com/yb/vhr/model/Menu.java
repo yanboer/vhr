@@ -18,8 +18,16 @@ public class Menu {
     private Integer parentId;
 
     private Boolean enabled;
-
     private List<Menu> children;
+    private List<Role> roles;     //根据
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
 
     public List<Menu> getChildren() {
         return children;
